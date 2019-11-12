@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap");
+
+title{
+  font-size: 200%
+}
+
+#canvas {
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+#body {
+  font-family: 'Noto Serif JP', serif;
+  /*background: hsl(227, 10%, 10%);*/
+  background-color: transparent;
+  color: #fffafa;
+  width: 90%;
+  position:absolute;
+  top:0;
+  margin: 5%;
+}
+
+a{
+  text-decoration: none;
+  color: #fffafa;
+  /*
+  a:visited { color: #000080; }
+  a:hover { color: #ff0000; }
+  a:active { color: #ff8000; }
+  */
+}
+
+.button{
+  display: block;
+  padding: 1.0em 2em;
+  margin: 0 0 1em;
+  width: 20%;
+  /*background-color: rgba(169,114,203,0.5);*/
+  color: #fffafa;
+  font-size: 150%;
+  border: 2px solid;
+  border-left: hidden;
+  border-right: hidden;
+  text-align: center;
+  overflow:hidden;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  padding: 0.6em 2em;
+  font-size: 170%;
+  border-color: rgba(255,255,255,0.8);
+  cursor: pointer;
+}
+
+.button-purple{
+  border-color: rgba(169,114,203,1.0);
+}
+.button-purple:hover{
+  background-color: rgba(169,114,203,0.5);
+}
+
+.button-pink{
+  border-color: rgba(239,110,174,1.0);
+}
+.button-pink:hover{
+  background-color: rgba(239,110,174,0.5);
+}
+
+.button-green{
+  border-color: rgba(143,200,102,1.0);
+}
+.button-green:hover{
+  background-color: rgba(143,200,102,0.5);
+  font-size: 150%;
+}
+
+.button-blue{
+  border-color: rgba(175,238,238,1.0);
+}
+.button-blue:hover{
+  background-color: rgba(175,238,238,0.5);
+  font-size: 150%;
+}
+
+
+.gnav {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  background: #a9a9a9;
+  opacity: 0.8;
+  position: sticky;/*固定する*/
+  position: -webkit-sticky;/*Safari用ベンダープレフィックス*/
+  top: 0;/*ブラウザの上からの距離はゼロ*/
+}
+.gnav .nav {
+  width: 300px;
+  height: 40px;
+  margin: 0 auto;
+  padding-left: 150px;
+  display: flex;
+}
+.gnav .nav li {
+  position: relative;
+  list-style: none;
+  box-sizing: border-box;
+  border-left: 1px solid #eee;
+}
+.gnav .nav li a {
+  display: block;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  color: #fffafa;
+  font-size: 12px;
+  line-height: 3.2;
+  /*background: #9fb7d4;*/
+  background-color: (169,169,169,0.8);
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.gnav .nav > li:hover > a {/*layer-1*/
+  color: black;
+  background: #fffafa;
+}
+.gnav .nav li ul {
+  top: 40px;
+  left: -40px;
+  position: absolute;
+}
+.gnav .nav li ul li {
+  overflow: hidden;
+  height: 0;
+}
+.gnav .nav li ul li a {
+  border-top: 1px solid #eee;
+}
+.gnav .nav li:hover > ul > li {
+  overflow: visible;
+  height: 40px;
+}
+  .gnav .nav li ul li ul {
+    top: 0;
+    left: 20px;
+  }
+  .gnav .nav li ul li ul:before {/*layer-2▷*/
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 30px;
+    border: 5px solid transparent;
+    border-left: 5px solid #fff;
+  }
+  .gnav .nav li ul li ul li:hover > a {/*layer-3*/
+    color: pink;
+    background: #afc6e2;
+  }
+  .gnav .nav li ul li ul.left {
+    top: 0;
+    left: -100px;
+  }
+@media (min-width: 769px) {
+.gnav {
+  overflow: visible;
+}
+.gnav .nav {
+  width: 755px;
+}
+.gnav .nav li {
+  box-sizing: border-box;
+}
+.gnav .nav li a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 2.8;
+}
+  .gnav .nav li ul li ul {
+    top: 0;
+    left: 110px;
+  }
+  .gnav .nav li ul li ul:before {/*layer-2▷*/
+    left: 30px;
+  }
+}
