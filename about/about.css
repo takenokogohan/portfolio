@@ -79,7 +79,6 @@ a {
   margin: 0 auto;
   padding-left: 25%;
   display: flex;
-  align-items: center;
 }
 .gnav .nav li {
   position: relative;
@@ -126,6 +125,6 @@ a {
   width: 25%;
   display: block;
   font-size: 14px;
-  text-align: right;
+  text-align: center;
   line-height: 2.8;
 }
