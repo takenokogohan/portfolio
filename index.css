@@ -8,7 +8,7 @@ title{
     position: relative;
     height: 0;
     overflow: hidden;
-    padding-top: 56.25%;
+    #padding-top: 56.25%;
 }
 
 #canvas {
