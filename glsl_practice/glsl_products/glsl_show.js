@@ -16,10 +16,16 @@ window.onload = function(){
 	ch = container.height();
 	c.width = cw; c.height = ch;
 */
-
-//c.height = container.offsetHeight;
-//c.width = container.offsetWidth;
-
+	if (
+    	navigator.userAgent.indexOf('iPhone') > 0 ||
+    	navigator.userAgent.indexOf('iPad') > 0 ||
+    	navigator.userAgent.indexOf('iPod') > 0 ||
+    	navigator.userAgent.indexOf('Android') > 0 )
+	{
+		cw = 834; ch = 1194;
+  	} else {
+    		cw = 1280; ch = 720;
+  	}
 
 	// canvas サイズ
 	cw = 1280; ch = 720;
