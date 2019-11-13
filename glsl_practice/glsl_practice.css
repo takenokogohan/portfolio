@@ -47,6 +47,19 @@ border: none;
   -webkit-transform : scale3d(1.05,1.05,1);
 }
 
+@media (max-width: 740px) {
+  .img-flex {
+    width: 100%;
+  }
+
+  .img-flex img {
+    width: 90%;
+  }
+  .img-flex img {
+    width: 90%;
+  }
+}
+
 
 .gnav {
   width: 100%;
@@ -117,4 +130,8 @@ border: none;
   font-size: 14px;
   text-align: center;
   line-height: 2.8;
+}
+.gnav .nav li:last-child {
+  font-size:11px;
+}
 }
