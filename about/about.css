@@ -115,6 +115,8 @@ a {
 }
 .gnav .nav {
   width: 100%;
+  margin: 0;
+  padding-left: 0;
 }
 .gnav .nav li {
   width: 20%;
