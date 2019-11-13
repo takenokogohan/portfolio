@@ -132,3 +132,8 @@ a {
   text-align: center;
   line-height: 2.8;
 }
+
+.gnav .nav li:last-child {
+  font-size:11px;
+}
+}
