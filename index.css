@@ -63,6 +63,7 @@ a{
 }
 
 .button-pink{
+  text-align: center;
   border-color: rgba(239,110,174,1.0);
 }
 .button-pink:hover{
@@ -98,10 +99,10 @@ a{
   top: 0;/*ブラウザの上からの距離はゼロ*/
 }
 .gnav .nav {
-  width: 300px;
+  width: 80%;
   height: 40px;
-  margin: 0 auto;
-  padding-left: 150px;
+  margin: 0;
+  padding-left: 25%;
   display: flex;
 }
 .gnav .nav li {
@@ -112,7 +113,7 @@ a{
 }
 .gnav .nav li a {
   display: block;
-  width: 60px;
+  width: 150px;
   height: 40px;
   text-align: center;
   color: #fffafa;
@@ -127,49 +128,15 @@ a{
   color: black;
   background: #fffafa;
 }
-.gnav .nav li ul {
-  top: 40px;
-  left: -40px;
-  position: absolute;
-}
-.gnav .nav li ul li {
-  overflow: hidden;
-  height: 0;
-}
-.gnav .nav li ul li a {
-  border-top: 1px solid #eee;
-}
-.gnav .nav li:hover > ul > li {
-  overflow: visible;
-  height: 40px;
-}
-  .gnav .nav li ul li ul {
-    top: 0;
-    left: 20px;
-  }
-  .gnav .nav li ul li ul:before {/*layer-2▷*/
-    position: absolute;
-    content: "";
-    top: 15px;
-    left: 30px;
-    border: 5px solid transparent;
-    border-left: 5px solid #fff;
-  }
-  .gnav .nav li ul li ul li:hover > a {/*layer-3*/
-    color: pink;
-    background: #afc6e2;
-  }
-  .gnav .nav li ul li ul.left {
-    top: 0;
-    left: -100px;
-  }
-@media (max-width: 769px) {
+
+
+@media (max-width: 768px) {
 .gnav {
   overflow: scroll;
 }
 .gnav .nav {
   width: 100%;
-  padding-left: 150px;
+  padding-left: 0px;
 }
 .gnav .nav li {
   width: 25%;
@@ -180,11 +147,13 @@ a{
   font-size: 14px;
   line-height: 2.8;
 }
+/*
   .gnav .nav li ul li ul {
     top: 0;
     left: 10px;
   }
-  .gnav .nav li ul li ul:before {/*layer-2▷*/
+  .gnav .nav li ul li ul:before {
     left: 30px;
   }
 }
+*/
