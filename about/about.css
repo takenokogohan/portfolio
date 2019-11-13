@@ -109,8 +109,9 @@ a {
   border-right: none;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 740px) {  
 .gnav {
+  width: 100%;
   overflow: scroll;
 }
 .gnav .nav {
