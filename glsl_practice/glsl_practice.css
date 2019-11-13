@@ -63,7 +63,7 @@ border: none;
   width: 80%; /*300*/
   height: 40px;
   margin: 0 auto;
-  padding-left: 150px;
+  padding-left: 25%;
   display: flex;
 }
 .gnav .nav li {
@@ -74,7 +74,7 @@ border: none;
 }
 .gnav .nav li a {
   display: block;
-  width: 60px;
+  width: 150px;
   height: 40px;
   text-align: center;
   color: #fffafa;
@@ -85,9 +85,14 @@ border: none;
   box-sizing: border-box;
   text-decoration: none;
 }
+
 .gnav .nav > li:hover > a {/*layer-1*/
   color: black;
   background: #fffafa;
+}
+
+.gnav .nav li:last-child {
+  border-right: none;
 }
 
 @media (max-width: 740px) {
