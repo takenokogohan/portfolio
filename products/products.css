@@ -150,58 +150,26 @@ li{
   background: #fffafa;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 740px) {
 .gnav {
-  overflow: visible;
+  overflow: scroll;
 }
 .gnav .nav {
-  width: 755px;
+  width: 100%;
+  padding-left: 0px;
 }
 .gnav .nav li {
+  width: 25%;
   box-sizing: border-box;
 }
-.gnav .nav li a {
-  display: block;
-  width: 150px;
-  height: 40px;
-  font-size: 14px;
-  line-height: 2.8;
-}
-
-
-.gnav .nav ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 150px;
-  list-style: none;
-}
-.gnav .nav ul li {
-  position: relative;
-  list-style: none;
-  box-sizing: border-box;
-  border-left: none;
-  border-right: 1px solid #eee;
-}
-.gnav .nav ul li a {
-  display: inline;
-  width: 60px;
-  height: 40px;
-  padding: 10px;
-  text-align: right;
-  color: #fffafa;
-  font-size: 18px;
-  line-height: 2.0;
-  /*background: #9fb7d4;*/
-  background-color: (169,169,169,0.8);
-  box-sizing: border-box;
-  text-decoration: none;
-}
-.gnav .nav > ul li:hover > a {/*layer-1*/
+.gnav .nav li:hover{
   color: black;
   background: #fffafa;
 }
-
-.gnav .nav ul li:last-child {
-  border-right: none;
+.gnav .nav li a {
+  width: 25%;
+  display: block;
+  font-size: 14px;
+  text-align: right;
+  line-height: 2.8;
 }
