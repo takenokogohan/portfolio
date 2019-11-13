@@ -130,7 +130,7 @@ a{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 740px) {
 .gnav {
   overflow: scroll;
 }
@@ -143,17 +143,9 @@ a{
   box-sizing: border-box;
 }
 .gnav .nav li a {
+  width: 25%;
   display: block;
   font-size: 14px;
   line-height: 2.8;
+  text-align: center;
 }
-/*
-  .gnav .nav li ul li ul {
-    top: 0;
-    left: 10px;
-  }
-  .gnav .nav li ul li ul:before {
-    left: 30px;
-  }
-}
-*/
