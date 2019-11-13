@@ -112,9 +112,9 @@ border: none;
   background: #fffafa;
 }
 .gnav .nav li a {
-  width: 25%;
+  width: 100%;
   display: block;
   font-size: 14px;
-  text-align: right;
+  text-align: center;
   line-height: 2.8;
 }
