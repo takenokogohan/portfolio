@@ -76,7 +76,7 @@ a {
 .gnav .nav {
   width: 80%; /*300*/
   height: 40px;
-  margin: 0;
+  margin: 0 auto;
   padding-left: 25%;
   display: flex;
 }
@@ -99,50 +99,15 @@ a {
   box-sizing: border-box;
   text-decoration: none;
 }
+
 .gnav .nav > li:hover > a {/*layer-1*/
   color: black;
   background: #fffafa;
 }
 
-.gnav .nav ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 20%;
-  list-style: none;
-}
-.gnav .nav ul li {
-  position: relative;
-  list-style: none;
-  box-sizing: border-box;
-  border-left: none;
-  border-right: 1px solid #eee;
-}
-.gnav .nav ul li a {
-  display: inline;
-  width: 20%;
-  height: 40px;
-  padding: 10px;
-  text-align: right;
-  color: black;
-  font-size: 18px;
-  line-height: 2.0;
-  /*background: #9fb7d4;*/
-  background-color: (169,169,169,0.8);
-  box-sizing: border-box;
-  text-decoration: none;
-}
-.gnav .nav > ul li:hover > a {/*layer-1*/
-  color: black;
-  background: #fffafa;
-}
-
-.gnav .nav ul li:last-child {
+.gnav .nav li:last-child {
   border-right: none;
 }
-
-
-
 
 @media (max-width: 740px) {
 .gnav {
@@ -152,49 +117,14 @@ a {
   width: 100%;
 }
 .gnav .nav li {
-  width: 15%;
+  width: 20%;
   box-sizing: border-box;
 }
 .gnav .nav li a {
   display: block;
-  width: 15%;
+  width: 20%;
   height: 40px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   line-height: 2.8;
-}
-
-.gnav .nav ul {
-  display: flex;
-  width: 15%;
-  list-style: none;
-}
-.gnav .nav ul li {
-  position: relative;
-  list-style: none;
-  box-sizing: border-box;
-  border-left: none;
-  border-right: 1px solid #eee;
-}
-.gnav .nav ul li a {
-  display: inline;
-  width: 15%;
-  height: 40px;
-  padding: 10px;
-  text-align: center;
-  color: #fffafa;
-  font-size: 18px;
-  line-height: 2.0;
-  /*background: #9fb7d4;*/
-  background-color: (169,169,169,0.8);
-  box-sizing: border-box;
-  text-decoration: none;
-}
-.gnav .nav > ul li:hover > a {/*layer-1*/
-  color: black;
-  background: #fffafa;
-}
-
-.gnav .nav ul li:last-child {
-  border-right: none;
 }
