@@ -121,6 +121,10 @@ a {
   width: 25%;
   box-sizing: border-box;
 }
+.gnav .nav li:hover{
+  color: black;
+  background: #fffafa;
+}
 .gnav .nav li a {
   width: 25%;
   display: block;
