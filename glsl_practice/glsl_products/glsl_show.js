@@ -26,9 +26,6 @@ window.onload = function(){
   	} else {
     		cw = 1280; ch = 720;
   	}
-
-	// canvas サイズ
-	cw = 1280; ch = 720;
 	//cw = container.width();
 	//ch = container.height();
 	c.width = cw; c.height = ch;
