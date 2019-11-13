@@ -58,7 +58,6 @@
 
     	vec3 gridcol = (mix(vec3(0.00, 0.90, 0.90), vec3(0.70, 0.20, 0.70), uv.y*2.0) + 1.2) * gridmix;
     	gridcol *= linstep(0.05,1.5,abs(uv.x - cen.x));
-    	//gridcol *= linstep(0.05,1.5,abs(uv.y - cen.y));
 
     	color = mix(gridcol, gridcol, gridcol);
     	gl_FragColor = vec4( color, 1.0 );
