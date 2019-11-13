@@ -7,11 +7,12 @@ var tempTime = 0.0;
 var fps = 1000 / 30;
 var uniLocation = new Array();
 
-//親要素のサイズをCanvasに指定
-c.width = container.clientWidth;
-c.height = container.clientHeight;
-
 window.onload = function(){
+	
+	//親要素のサイズをCanvasに指定
+	c.width = container.clientWidth;
+	c.height = container.clientHeight;
+
   
 	c.addEventListener('mousemove', mouseMove, true);
 
