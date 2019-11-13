@@ -142,6 +142,8 @@ a {
 }
 
 
+
+
 @media (max-width: 740px) {
 .gnav {
   overflow: scroll;
@@ -150,23 +152,21 @@ a {
   width: 100%;
 }
 .gnav .nav li {
-  width: 20%;
+  width: 15%;
   box-sizing: border-box;
 }
 .gnav .nav li a {
   display: block;
-  width: 20%;
+  width: 15%;
   height: 40px;
   font-size: 14px;
-  text-align: right;
+  text-align: center;
   line-height: 2.8;
 }
 
 .gnav .nav ul {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 20%;
+  width: 15%;
   list-style: none;
 }
 .gnav .nav ul li {
@@ -178,11 +178,11 @@ a {
 }
 .gnav .nav ul li a {
   display: inline;
-  width: 20%;
+  width: 15%;
   height: 40px;
   padding: 10px;
-  text-align: right;
-  color: black;
+  text-align: center;
+  color: #fffafa;
   font-size: 18px;
   line-height: 2.0;
   /*background: #9fb7d4;*/
