@@ -39,7 +39,6 @@
 
     void main()
     {
-    	//vec2 aspect = (resolution.xy / cos(sin(time)/2.0) ) / (resolution.y / sin(cos(time)/2.0) );
     	vec2 aspect = (resolution.xy ) / (resolution.y);
     	vec2 uv = gl_FragCoord.xy / resolution.y;
     	vec2 cen = aspect/2.0;
@@ -79,7 +78,8 @@
       <li></li>
     </ul>
     </div>
-
+    
+   <div id="canvas-container">
     <section id="body">
       <!--ここがbody-->
       <h1 align="center">TITLE</h1>
@@ -99,6 +99,6 @@
       </div>
     </section>
     <canvas id="canvas"></canvas>
-
+   </div>
   </body>
 </html>
