@@ -4,15 +4,7 @@ title{
   font-size: 200%
 }
 
-#canvas-container{
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    #padding-top: 56.25%;
-}
-
 #canvas {
-  position: absolute;
   top:0;
   left:0;
   width:100%;
