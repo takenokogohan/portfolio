@@ -76,8 +76,8 @@ a {
 .gnav .nav {
   width: 80%; /*300*/
   height: 40px;
-  margin: 0 auto;
-  padding-left: 150px;
+  margin: 0;
+  padding-left: 25%;
   display: flex;
 }
 .gnav .nav li {
@@ -88,7 +88,7 @@ a {
 }
 .gnav .nav li a {
   display: block;
-  width: 60px;
+  width: 150px;
   height: 40px;
   text-align: center;
   color: #fffafa;
@@ -104,30 +104,11 @@ a {
   background: #fffafa;
 }
 
-@media (min-width: 769px) {
-.gnav {
-  overflow: visible;
-}
-.gnav .nav {
-  width: 755px;
-}
-.gnav .nav li {
-  box-sizing: border-box;
-}
-.gnav .nav li a {
-  display: block;
-  width: 150px;
-  height: 40px;
-  font-size: 14px;
-  line-height: 2.8;
-}
-
-
 .gnav .nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 150px;
+  width: 20%;
   list-style: none;
 }
 .gnav .nav ul li {
@@ -139,11 +120,69 @@ a {
 }
 .gnav .nav ul li a {
   display: inline;
-  width: 60px;
+  width: 20%;
   height: 40px;
   padding: 10px;
   text-align: right;
-  color: #fffafa;
+  color: black;
+  font-size: 18px;
+  line-height: 2.0;
+  /*background: #9fb7d4;*/
+  background-color: (169,169,169,0.8);
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.gnav .nav > ul li:hover > a {/*layer-1*/
+  color: black;
+  background: #fffafa;
+}
+
+.gnav .nav ul li:last-child {
+  border-right: none;
+}
+
+
+@media (max-width: 740px) {
+.gnav {
+  overflow: scroll;
+}
+.gnav .nav {
+  width: 100%;
+}
+.gnav .nav li {
+  width: 20%;
+  box-sizing: border-box;
+}
+.gnav .nav li a {
+  display: block;
+  width: 20%;
+  height: 40px;
+  font-size: 14px;
+  text-align: right;
+  line-height: 2.8;
+}
+
+.gnav .nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  list-style: none;
+}
+.gnav .nav ul li {
+  position: relative;
+  list-style: none;
+  box-sizing: border-box;
+  border-left: none;
+  border-right: 1px solid #eee;
+}
+.gnav .nav ul li a {
+  display: inline;
+  width: 20%;
+  height: 40px;
+  padding: 10px;
+  text-align: right;
+  color: black;
   font-size: 18px;
   line-height: 2.0;
   /*background: #9fb7d4;*/
