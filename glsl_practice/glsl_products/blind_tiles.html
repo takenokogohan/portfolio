@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CubeMapping</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="glsl_show.css" rel="stylesheet" type="text/css"/>
+  <script src="glsl_show.js" type="text/javascript"> </script>
+  <script id="vs" type="x-shader/x-vertex">
+    attribute vec3 position;
+
+      void main(void){
+        gl_Position = vec4(position, 1.0);
+      }
+  </script>
+  <script id="fs" type="x-shader/x-fragment">
+  precision mediump float;
+  uniform vec2 resolution;
+  uniform float time;
+
+  void main(){
+    vec2 p = (gl_FragCoord.xy*2.0 - resolution) / min(resolution.x, resolution.y);
+    vec3 col = vec3(0.3);
+
+    float l = (1.0 - smoothstep(0.1,0.2, mod(p.y,0.2))) * (1.0 - smoothstep(0.1, sin(time)/2., mod(p.x,0.2)));
+    col += l * vec3(0.5, 0.5, 0.0);
+
+    gl_FragColor = vec4(col, 1.0);
+  }
+
+  </script>
+</head>
+<body>
+  <div id="wrap">
+  <canvas id="canvas"></canvas>
+  </div>
+</body>
+</html>
