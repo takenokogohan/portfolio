@@ -49,7 +49,7 @@
     	vec2 gruv = uv-cen;
     	gruv *= rot(300.);
 
-    	gruv = vec2(gruv.x * abs(1.4/gruv.y), abs(1.0/gruv.y) + ( mod(time/2., 1.0 ) ) );
+    	gruv = vec2(gruv.x * abs(1.4/gruv.y), abs(1.0/gruv.y) + ( mod(time/2., 50.0 ) ) );
     	gruv.y = clamp(gruv.y,-1e2,1e2);
 
     	float grid = 2.0 * cdist(vec2(0.5), mod((gruv)*1.0,vec2(0.8)));
