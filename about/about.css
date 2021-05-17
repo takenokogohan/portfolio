@@ -23,7 +23,7 @@ a {
   color: #fffafa;
 }
 
-.mokuzi_in_page ul{
+.mokuzi_in_page ul {
   border: solid 2px #EEEEEE;
   border-radius: 5px;
   padding: 0.5em 1em 0.5em 2.3em;
@@ -36,11 +36,12 @@ a {
   list-style-type: none!important;
 }
 
-.mokuzi_in_page ul li:before {  
-  content: "\f138";/*アイコンの種類*/
+.mokuzi_in_page ul li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f138";
   position: absolute;
-  left : 1em;/*左端からのアイコンまでの距離*/
-  color: #EEEEEE;/*アイコン色*/
+  left : 1em;
+  color: #EEEEEE;
 }
 
 .products {
