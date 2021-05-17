@@ -41,6 +41,15 @@ a {
 .mokuzi_in_page ul li, ol li {
   line-height: 1.5;
   padding: 0.5em 0;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.mokuzi_in_page:hover ul li, ol li{
+  font-color: #E0FFFF;
+  font-size: 20px;
 }
 
 .anchor{
