@@ -47,7 +47,7 @@ a {
     transition: all  0.3s ease;
 }
 
-.mokuzi_in_page:hover ul li, ol li{
+.mokuzi_in_page ul li a:hover{
   font-color: #E0FFFF;
   font-size: 20px;
 }
