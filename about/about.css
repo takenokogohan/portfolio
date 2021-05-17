@@ -35,6 +35,11 @@ a {
   padding: 0.5em 0;
 }
 
+.anchor{
+  padding-top: 70px;
+    margin-top: -70px;
+}
+
 .products {
   width: 75%;
   max-width: 100%;
