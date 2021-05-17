@@ -23,6 +23,14 @@ a {
   color: #fffafa;
 }
 
+.mokuzi_in_page{
+  width: 20%;
+  max-width: 100%;
+  margin: auto;
+  padding: 0%;
+  text-align: left;
+}
+
 .mokuzi_in_page ul, ol {
   color: #EEEEEE;
   border-top: solid #EEEEEE; 1px;/*上のボーダー*/
