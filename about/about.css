@@ -23,25 +23,16 @@ a {
   color: #fffafa;
 }
 
-.mokuzi_in_page ul {
-  border: solid 2px #EEEEEE;
-  border-radius: 5px;
-  padding: 0.5em 1em 0.5em 2.3em;
-  position: relative;
+.mokuzi_in_page ul, ol {
+  color: #EEEEEE;
+  border-top: solid #EEEEEE; 1px;/*上のボーダー*/
+  border-bottom: solid #EEEEEE; 1px;/*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
 }
 
-.mokuzi_in_page ul li {
+.mokuzi_in_page ul li, ol li {
   line-height: 1.5;
   padding: 0.5em 0;
-  list-style-type: none!important;
-}
-
-.mokuzi_in_page ul li:before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f138";
-  position: absolute;
-  left : 1em;
-  color: #EEEEEE;
 }
 
 .products {
