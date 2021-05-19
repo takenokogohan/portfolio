@@ -63,7 +63,7 @@ a{
 }
 
 .button-pink{
-  text-align: center;
+  /*text-align: center;*/
   border-color: rgba(239,110,174,1.0);
 }
 .button-pink:hover{
