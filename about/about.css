@@ -36,9 +36,14 @@ a {
   border-top: solid #EEEEEE; 1px;/*上のボーダー*/
   border-bottom: solid #EEEEEE; 1px;/*下のボーダー*/
   padding: 0.5em 0 0.5em 1.5em;
+  float:left;
+  position:relative;
+  left:50%;
 }
 
 .mokuzi_in_page ul li, ol li {
+  position:relative;
+  left:-50%;
   line-height: 1.5;
   padding: 0.5em 0;
   -webkit-transition: all 0.3s ease;
