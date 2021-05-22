@@ -23,6 +23,54 @@ a {
   color: #fffafa;
 }
 
+.mokuzi_in_page{
+  width: 70%;
+  max-width: 100%;
+  margin: auto;
+  padding: 1%;
+  text-align: center;
+}
+
+.mokuzi_in_page ul, ol {
+  list-style: none;
+  color: #EEEEEE;
+  border-top: solid #EEEEEE; 1px;/*上のボーダー*/
+  border-bottom: solid #EEEEEE; 1px;/*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
+}
+
+.mokuzi_in_page ul li, ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.mokuzi_in_page ul li a{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.mokuzi_in_page ul li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #EEEEEE;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.mokuzi_in_page ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
 .products {
   width: 75%;
   max-width: 100%;
