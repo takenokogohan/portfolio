@@ -1,21 +1,14 @@
-// global
 var c, cw, ch, mx, my, gl, run, eCheck;
 var startTime;
 var time = 0.0;
 var tempTime = 0.0;
 var fps = 1000 / 30;
-var uniLocation = new Array();
+var uniformLocation = new Array();
 
-// onload
 window.onload = function(){
 	// canvas エレメントを取得
 	c = document.getElementById('canvas');
-	//var container = document.getElementById('wrap');
-/*
-	cw = container.width();
-	ch = container.height();
-	c.width = cw; c.height = ch;
-*/
+
 	if (
     	navigator.userAgent.indexOf('iPhone') > 0 ||
     	navigator.userAgent.indexOf('iPad') > 0 ||
@@ -26,32 +19,22 @@ window.onload = function(){
   	} else {
     		cw = 1280; ch = 720;
   	}
-	//cw = container.width();
-	//ch = container.height();
 	c.width = cw; c.height = ch;
-
-	//これ動かなくなる
-	//create_texture('modern_buildings_night_1k.hdr');
-	//gl.uniform1i(uniLocation[1], 0);
-
-	// エレメントを取得
-	//eCheck = document.getElementById('check');
 
 	// イベントリスナー登録
 	c.addEventListener('mousemove', mouseMove, true);
-	//eCheck.addEventListener('change', checkChange, true);
 
 	// WebGL コンテキストを取得
 	gl = c.getContext('webgl') || c.getContext('experimental-webgl');
 
-	// シェーダ周りの初期化
+	// 初期化
 	var prg = create_program(create_shader('vs'), create_shader('fs'));
 	run = (prg != null); if(!run){eCheck.checked = false;}
 	uniLocation[0] = gl.getUniformLocation(prg, 'time');
 	uniLocation[1] = gl.getUniformLocation(prg, 'mouse');
 	uniLocation[2] = gl.getUniformLocation(prg, 'resolution');
 
-	// 頂点データ回りの初期化
+	// 頂点データの初期化
 	var position = [
 		-1.0,  1.0,  0.0,
 		 1.0,  1.0,  0.0,
@@ -70,27 +53,15 @@ window.onload = function(){
 	gl.vertexAttribPointer(vAttLocation, 3, gl.FLOAT, false, 0, 0);
 	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, vIndex);
 
-	// その他の初期化
+	// 初期化
 	gl.clearColor(0.0, 0.0, 0.0, 1.0);
-	mx = 0.5; my = 0.5;
+	mx = 0.5;
+	my = 0.5;
 	startTime = new Date().getTime();
 
-	// レンダリング関数呼出
 	render();
 };
 
-/*
-// checkbox
-function checkChange(e){
-	run = e.currentTarget.checked;
-	if(run){
-		startTime = new Date().getTime();
-		render();
-	}else{
-		tempTime += time;
-	}
-}
-*/
 startTime = new Date().getTime();
 render();
 
@@ -113,9 +84,9 @@ function render(){
 	gl.clear(gl.COLOR_BUFFER_BIT);
 
 	// uniform 関連
-	gl.uniform1f(uniLocation[0], time + tempTime);
-	gl.uniform2fv(uniLocation[1], [mx, my]);
-	gl.uniform2fv(uniLocation[2], [cw, ch]);
+	gl.uniform1f(uniformLocation[0], time + tempTime);
+	gl.uniform2fv(uniformLocation[1], [mx, my]);
+	gl.uniform2fv(uniformLocation[2], [cw, ch]);
 
 	// 描画
 	gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
@@ -160,12 +131,8 @@ function create_shader(id){
 
 	// シェーダが正しくコンパイルされたかチェック
 	if(gl.getShaderParameter(shader, gl.COMPILE_STATUS)){
-
-		// 成功していたらシェーダを返して終了
 		return shader;
 	}else{
-
-		// 失敗していたらエラーログをアラートしコンソールに出力
 		alert(gl.getShaderInfoLog(shader));
 		console.log(gl.getShaderInfoLog(shader));
 	}
@@ -185,14 +152,11 @@ function create_program(vs, fs){
 
 	// シェーダのリンクが正しく行なわれたかチェック
 	if(gl.getProgramParameter(program, gl.LINK_STATUS)){
-
 		// 成功していたらプログラムオブジェクトを有効にする
 		gl.useProgram(program);
-
 		// プログラムオブジェクトを返して終了
 		return program;
 	}else{
-
 		// 失敗していたら NULL を返す
 		return null;
 	}
