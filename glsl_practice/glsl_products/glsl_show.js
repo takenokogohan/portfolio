@@ -1,4 +1,4 @@
-var c, gl, run eCheck;
+var c, gl, run, eCheck;
 var c_w, c_h;
 var m_x, m_y;
 var startTime;
