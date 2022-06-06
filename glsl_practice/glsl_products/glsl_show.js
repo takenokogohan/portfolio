@@ -1,6 +1,4 @@
-var c, gl, run, eCheck;
-var c_w, c_h;
-var m_x, m_y;
+var c, gl, run, eCheck, c_w, c_h, m_x, m_y;
 var startTime;
 var time = 0.0;
 var tempTime = 0.0;
