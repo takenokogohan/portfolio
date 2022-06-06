@@ -162,8 +162,8 @@ function render(){
 	gl.clear(gl.COLOR_BUFFER_BIT);
 
 	gl.uniform1f(uniformLocation[0], time + tempTime);
-	gl.uniform2fv(uniformLocation[1], [mx, my]);
-	gl.uniform2fv(uniformLocation[2], [cw, ch]);
+	gl.uniform2fv(uniformLocation[1], [m_x, m_y]);
+	gl.uniform2fv(uniformLocation[2], [c_w, c_h]);
 
 	gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
 	gl.flush();
