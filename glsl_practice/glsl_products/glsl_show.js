@@ -33,9 +33,9 @@ window.onload = function(){
     eCheck.checked = false;
   }
 
-	uniLocation[0] = gl.getUniformLocation(prg, 'time');
-	uniLocation[1] = gl.getUniformLocation(prg, 'mouse');
-	uniLocation[2] = gl.getUniformLocation(prg, 'resolution');
+	uniformLocation[0] = gl.getUniformLocation(prg, 'time');
+	uniformLocation[1] = gl.getUniformLocation(prg, 'mouse');
+	uniformLocation[2] = gl.getUniformLocation(prg, 'resolution');
 
   var position = [
     -1.0,  1.0,  0.0,
